@@ -1,8 +1,8 @@
 {
 	"name": "randomly-id-generator",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "This module generates random ids, which you can customize.",
-	"main": "src/index.js",
+	"main": "dist/index.js",
 	"keywords": [],
 	"author": "PabloRNC",
 	"license": "ISC",

@@ -26,22 +26,25 @@ id.length = 13 //the number of characters the id will have
 
 id.custom = "a b c" //you can customize the characters putting on a string separeted with an empty character or on an array ["a", "b", "c"]
 
-id.type = "only_numbers" //the type of id, you cannot customize an id and put a type otherwise the npm will throw an error
 
-id.generate() //generates the id
+
+id.generate() //generates the id with the characters "a", "b" and "c"
 
 console.log(id)
 
 ```
-Types of ids: 
+You also can put the default types of ids that are:
 ```js
 "default" //the default id composed by numbers, letters and symbols
 "only_numbers" //only numbers on the id
 "only_letters" //only letters on the id
+
+//Important: If you do not put a customize id and any type by default the type is going to be the default. 
+
 ```
 
-If you want to report an issue or a bug you can go to this [GitHub Repository] and report it[clik here](https://github.com/PabloRNC/randomly-id-generator/issues) to report it and I will fixed as fast as I can
+If you put a customize id and a default type the npm will give you an error 
 
-
+If you want to report an issue or a bug you can go to this [GitHub Repository](https://github.com/PabloRNC/randomly-id-generator/issues) and report it and I will fix it as fast as I can
 
 

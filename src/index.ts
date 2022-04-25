@@ -2,6 +2,7 @@ import { default_type } from './types/default'
 import { only_letters } from './types/only_letters'
 import { only_numbers } from './types/only_numbers'
 
+
 export class Generator {
 	private type: GeneratorOptions['type']
 	private length: number
@@ -27,12 +28,13 @@ export class Generator {
 			throw new Error('Length must be a number')
 		}
 
-		if (this.custom) {
+		if (this.custom && this.type) {
 			throw new Error('You cannot customize a id and put a default type on the generator')
 		}
 
-		if (!this.custom) {
-			switch (this.type.toLowerCase) {
+		if(!this.custom) {
+			
+			switch (this.type? this.type.toLowerCase(): this.type) {
 				case 'default':
 					{
 						this.custom = default_type as unknown as string
@@ -60,8 +62,9 @@ export class Generator {
 					)
 				}
 			}
-		}
-
+			}
+		
+        
 		if (!Array.isArray(this.custom)) {
 			switch (typeof this.custom) {
 				case 'string':
@@ -72,7 +75,7 @@ export class Generator {
 						type.forEach((element: string) => {
 							if (element.length > 1) {
 								throw new Error(
-									`The supplied type is not a valid type, recived(${this.type})`
+									`For custom type, you can only use one character that is not separated by an empty space on strings, recived(${element})`
 								)
 							}
 						})
@@ -89,14 +92,15 @@ export class Generator {
 			this.custom.forEach((element: string) => {
 				if (element.length > 1) {
 					throw new Error(
-						'For custom ids array elements must be only one length string'
+						`For custom ids array elements must be only one length string, recived(${element})`
 					)
 				}
 			})
-
+		
 			// eslint-disable-next-line no-var
 			var type = this.custom as string[]
 		}
+	
 
 		const id: string[] = []
 
