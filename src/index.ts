@@ -32,7 +32,7 @@ export class Generator {
 		}
 
 		if (!this.custom) {
-			switch (this.type) {
+			switch (this.type.toLowerCase) {
 				case 'default':
 					{
 						this.custom = default_type as unknown as string
