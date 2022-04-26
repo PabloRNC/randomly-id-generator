@@ -4,8 +4,6 @@
 		"target": "ES6",
 		"skipLibCheck": true,
 		"strict": true,
-		"sourceMap": true,
-		"declaration": false,
 
 		/* Paths */
 		"outDir": "./dist",
@@ -20,7 +18,6 @@
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
-		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 
@@ -33,11 +30,9 @@
 
 		/* Other settings */
 		"esModuleInterop": true,
-		"exactOptionalPropertyTypes": true,
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"allowJs": true
+		"resolveJsonModule": true
 	},
 	"include": ["./src"],
 	"exclude": ["node_modules"]
