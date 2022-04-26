@@ -35,9 +35,9 @@ console.log(id);
 You also can put the default types of ids that are:
 
 ```js
-'default'; //the default id composed by numbers, letters and symbols
-'only_numbers'; //only numbers on the id
-'only_letters'; //only letters on the id
+'DEFAULT'; //the default id composed by numbers, letters and symbols
+'ONLY_NUMBERS'; //only numbers on the id
+'ONLY_LETTERS'; //only letters on the id
 
 //Important: If you do not put a customize id and any type by default the type is going to be the default.
 ```
