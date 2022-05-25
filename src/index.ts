@@ -1,5 +1,8 @@
 import { defaultType, onlyLetters, onlyNumbers } from './types'
+
 import { randomInt } from 'node:crypto'
+
+
 
 export class Generator implements GeneratorOptions {
 	public type: GeneratorTypes | undefined
