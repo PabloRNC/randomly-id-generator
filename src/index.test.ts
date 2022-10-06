@@ -5,4 +5,5 @@ const id = new Generator({
 	length: 20,
 })
 
+
 console.log(id.generate())
